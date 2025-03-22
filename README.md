@@ -1,4 +1,4 @@
-# Heart Disease Detection System
+# ❤️Heart Disease Detection System❤️
 
 ## 📋 Project Overview
 This project is a comprehensive Heart Disease Detection System that combines a rule-based expert system and a machine learning model (Decision Tree Classifier). It provides both medical reasoning and predictive analytics based on patient input, with a user-friendly web interface built using Streamlit.
