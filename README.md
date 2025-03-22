@@ -49,12 +49,11 @@ graphviz>=0.20.1
 frozendict==2.3.8
 scipy==1.7.1
 ```
- 
-5. **Install dependencies**:
+ 4. **Install dependencies**:
 ```bash
 pip install -r requirements.txt
 ```
-4. **Run the Streamlit App**:
+5. **Run the Streamlit App**:
 ```bash
 streamlit run "D:\Semester Four\Intelligent Programming\Project 1\notebooks\rule_based_system\app.py"   ##Change path of file (Run on CMD)
 ```
