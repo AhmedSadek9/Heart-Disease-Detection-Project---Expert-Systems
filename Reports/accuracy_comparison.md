@@ -90,11 +90,6 @@ The aim is to analyze their performance metrics and guide further improvements.
 
 ---
 
-## 5. Recommendations
-- **Hybrid Usage:** Use the Expert System for initial evaluation and education, and the ML model for final risk scoring.
-- **Continuous Updates:** Update Expert System rules with insights from ML model misclassifications.
-- **User Confidence:** Visualize confidence levels for Decision Tree predictions alongside expert logic explanations.
-- **Deployability:** Package both models in an easy-to-use Streamlit app, as done, with additional charts and user guidance.
 
 ---
 
