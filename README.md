@@ -1,15 +1,16 @@
 # Heart Disease Detection System
 
 ## 📋 Project Overview
-This project is a comprehensive Heart Disease Detection System combining a rule-based expert system and a machine learning model (Decision Tree Classifier). The system provides expert reasoning and predictive analytics based on patient input.
+This project is a comprehensive Heart Disease Detection System that combines a rule-based expert system and a machine learning model (Decision Tree Classifier). It provides both medical reasoning and predictive analytics based on patient input, with a user-friendly web interface built using Streamlit.
 
 ## ✅ Key Features
-- **Rule-Based Expert System** built with the Experta library.
+- **Rule-Based Expert System** powered by the Experta library.
 - **Decision Tree Classifier** trained with hyperparameter tuning.
-- **User input validation** with clear prompts and safe ranges.
-- **Confidence-based prediction** with accuracy calculation.
-- **Feature importance visualization (planned)**.
-- Support for additional parameters like exercise habits, smoking status, glucose levels, family history, and more.
+- **Streamlit web application** for easy and interactive user input.
+- Dynamic **confidence-based predictions** blending expert and model assessments.
+- Risk factor visualizations (bar chart and pie chart) based on personal data.
+- Downloadable patient report in CSV format.
+- Extensive input parameters: cholesterol, blood pressure, BMI, glucose, exercise, smoking, alcohol, stress, sleep hours, family history, chest pain, and more.
 
 ## 📁 Project Structure
 ```
@@ -21,7 +22,7 @@ This project is a comprehensive Heart Disease Detection System combining a rule-
 │── model_features.joblib             # Stored feature columns post encoding
 │── heart_disease_decision_tree_model.joblib   # Trained decision tree model
 │── heart_cleaned_data.csv            # Dataset used for training
-│── main.py                           # Combined expert system + model CLI script
+│── main.py                           # Streamlit-based main interface
 │── README.md                         # Documentation and setup guide
 ```
 
@@ -38,43 +39,52 @@ cd heart-disease-detection-system
 ```bash
 pip install -r requirements.txt
 ```
+4. **Run the Streamlit App**:
+```bash
+streamlit run "D:\Semester Four\Intelligent Programming\Project 1\notebooks\rule_based_system\app.py"   ##Change path of file (Run on CMD)
+```
+
+## 🌐 Streamlit Application Details
+- The app provides a sidebar with comprehensive health input fields (age, cholesterol, BP, glucose, BMI, etc.).
+- After input submission, it shows expert system outputs and model-based predictions with confidence levels.
+- Interactive visualizations:
+  - Bar charts for key health metrics.
+  - Pie charts showing factor contributions to overall risk.
+- Downloadable reports for users in CSV format.
+- Responsive UI with wide layout support for a smooth experience.
+- Ready to be deployed on Streamlit Cloud or Heroku for remote access.
 
 ## 📊 Dataset Details
 The dataset includes features such as:
 - Age, cholesterol level, blood pressure, glucose, BMI
 - Exercise frequency, smoking status, alcohol consumption
-- Diet type, family history, chest pain type, and more.
+- Diet type, family history, chest pain type, rest ECG results, and more.
+- Source: [Add dataset source or citation if applicable]
 
 ## 🧠 Expert System Rules Summary
-- High cholesterol combined with age
-- High blood pressure with smoking
-- Obesity with poor diet
-- Genetic risks with age
-- Inactivity and high BMI
-- Alcohol and blood pressure risks
-- All conditions print real-time risk warnings.
+- High cholesterol combined with age triggers warning.
+- Blood pressure issues and smoking raise alerts.
+- Poor diet and obesity contribute to risks.
+- Genetic factors combined with unhealthy lifestyle conditions are highlighted.
+- Inactivity and stress levels are factored into risk.
+- Real-time explanations of triggered rules are shown to the user.
 
 ## 🤖 Machine Learning Model
-- Trained Decision Tree Classifier with GridSearchCV tuning.
-- Performance metrics: Accuracy, Precision, Recall, and F1-Score.
-- Model saved via `joblib` for deployment.
+- Decision Tree Classifier trained with GridSearchCV.
+- Key metrics: Accuracy, Precision, Recall, F1-Score.
+- Stored using `joblib` for fast inference.
+- Combined prediction confidence calculated using probability and custom risk score.
 
-## 🚀 How to Run
-1. **Run both Expert System & Model Prediction:**
-```bash
-python main.py
-```
-2. **Train the Decision Tree Model (if retraining is required):**
-```bash
-python rule_based_system/Decision Tree Model.py
-```
+## 📈 Key Visualizations in the App
+- Bar plot: Cholesterol, Blood Pressure, BMI, Glucose, Sleep Hours.
+- Pie chart: Relative contribution of cholesterol, blood pressure, BMI, glucose, and sleep & stress factors.
+- Downloadable CSV report of user inputs and prediction.
 
-## 📈 Planned Enhancements
-- Interactive Streamlit web app interface.
-- Dynamic visualization of user-based risk contributions.
-- Detailed risk factor explanations and education.
-- Deployment as a web service.
-- Integration of additional algorithms for ensemble prediction.
-
+## 🚀 Future Improvements
+- Deployment on cloud (Heroku/Streamlit Cloud).
+- Additional ensemble models.
+- Historical tracking of user predictions.
+- More detailed educational content and tips.
+- Mobile responsiveness and theme customization in Streamlit.
 
 
