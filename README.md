@@ -94,11 +94,5 @@ The dataset includes features such as:
 - Pie chart: Relative contribution of cholesterol, blood pressure, BMI, glucose, and sleep & stress factors.
 - Downloadable CSV report of user inputs and prediction.
 
-## 🚀 Future Improvements
-- Deployment on cloud (Heroku/Streamlit Cloud).
-- Additional ensemble models.
-- Historical tracking of user predictions.
-- More detailed educational content and tips.
-- Mobile responsiveness and theme customization in Streamlit.
 
 
